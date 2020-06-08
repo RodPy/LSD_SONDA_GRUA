@@ -1,4 +1,4 @@
- ./*
+/*
 Codigo Motor 
 Pin GND   gnd
 Pin PWM   Pin 3 
@@ -9,8 +9,8 @@ Pin Dir   Pin 2
 #define pwm 3
 #define dir 2
 
-int velS=100; //Velocidad subida
-int velB=100; //Velocidad bajada
+int velS=200; //Velocidad subida
+int velB=200; //Velocidad bajada
 
 void setup() {                
 
@@ -21,11 +21,13 @@ void setup() {
 
 
 void loop() {
-  
-  bajar(1000);
-  delay(2000);  
-  subir(1000);
-  delay(2000);  
+ 
+  Serial.println("BAJANDO");
+  bajar(2000);
+  delay(5000);  
+  Serial.println("SUBIENDO");
+  subir(2000);
+  delay(5000);  
 }
 
 void bajar(int x){
